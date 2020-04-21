@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+<li><a href="/">назад</a></li>
+{% block content %}
+    {% for post in User %}
+        <div class="post">
+            <div class="title">
+                <p> {{ post.id }} </p>
+                <p> {{ post.login }} </p>
+                <p> {{ post.hashed_password }} </p>
+                <p> {{ post.date }} </p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>
